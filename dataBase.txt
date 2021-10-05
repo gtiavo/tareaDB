@@ -1,0 +1,80 @@
+1º : Definicion de las relaciones y 5 ejemplos de c/u (uno a uno / uno a muchos / muchos a muchos):
+
+RELACIÓN UNO A UNO:
+    Se presenta cuando una única ocurrencia de la entidad A se relaciona con una sola ocurrencia de la entidad B y viceversa.
+EJEMPLOS:
+    A- la planilla de estudiante de DH (id planilla) con un estudiante de Digital House(id-estudiante).
+    B- un auto (patente) con su dueño(id-usuario).
+    C- un comercio (id) con su comerciante (id-comercio).
+    D- usuario (direccion_id) con su direccion (id).
+    E- un hombre (id) con una mujer (id-casado)  
+
+RELACIÓN UNO A MUCHOS:
+    Es el tipo de relación más común. Significa que un registro de la tabla A puede tener muchos registros coincidentes en la tabla B,
+     pero un registro de la tabla B solo tiene un registro coincidente en la tabla A. 
+
+    A-  un cliente (id) puede realizar varios PEDIDOS(id_cliente)
+    B-  un cliente (id) puede tener varias Tarjetas(id_cliente).
+    C-  un profesor(id) puede tener muchos alumnos(id_profesor) 
+    D-  una institucion educativa (id) puede terner muchos profesores (id_institucion)
+    E-  un medico(id) puede terner muchos pacientes(id_medico). 
+ 
+
+RELACIÓN MUCHOS  A MUCHOS:
+    Establece que cualquier cantidad de entidades del tipo A pueden estar relacionados con cualquier cantidad  de entidades del tipo B. En otras palabras, 
+    un registro de la tabla A puede tener muchos registros  coincidentes en la tabla B, y viceversa.
+     Este tipo de relación sólo es posible si se define una tercera tabla (denominada tabla de unión), 
+    cuya clave principal consta de  dos campos: las claves externas de las tablas A y B.
+
+    A- muchos clientes (id) pueden tener muchos pedidos (id)= cliente_pedido(id_cliente, id_pedido).
+    B- muchos profesores (id) pueden tener muchos alumnos (id)= cursos(id_profesores, id_alumnos).
+    C- muchos medicos(id) pueden tener muchos pacientes(id)= consultas(id_medico, id_paciente).
+    D- muchas ciudades (id) pueden tener muchas casas de comida de marca reconocida(id)= mcdonals(id_ciudad, id-establecimiento)
+    E- muchos programadores (id) pueden tener muchas tareas (id)= jira(id_developer, id_tarea) 
+
+    2º : Investigar que es un SGBD (cuales son los mas famosos).
+
+    Un gestor de base de datos o SGBD es una colección de programas cuyo objetivo es servir de interfaz entre la base de datos, el usuario y las aplicaciones. 
+    Se compone de un lenguaje de definición de datos, 
+    de un lenguaje de manipulación de datos y de un lenguaje de consulta.
+
+    Un SGBD permiten definir los datos a distintos niveles de abstracción y manipular dichos datos, garantizando la seguridad e integridad de estos.
+
+    Algunos ejemplos de SGBD son Oracle, DB2, PostgreSQL, MySQL, MS SQL Server, etc.
+
+    Un SGBD debe permitir:
+       Definir una base de datos: especificar tipos, estructuras y restricciones de datos.
+
+       Construir la base de datos: guardar los datos en algún medio controlado por el mismo SGBD 
+
+       Manipular la base de datos: realizar consultas, actualizarla, generar informes. 
+    
+    Las características de un Sistema Gestor de Base de Datos SGBD son:
+        Abstracción de la información. Los SGBD ahorran a los usuarios detalles acerca del almacenamiento físico de los datos. 
+    Da lo mismo si una base de datos ocupa uno o cientos de archivos, este hecho se hace transparente al usuario. Así, se definen varios niveles de abstracción.
+
+        Independencia. La independencia de los datos consiste en la capacidad de modificar el esquema (físico o lógico) de una base de datos sin tener que realizar cambios en las aplicaciones que se sirven de ella.
+
+        Redundancia mínima. Un buen diseño de una base de datos logrará evitar la aparición de información repetida o redundante. De entrada, lo ideal es lograr una redundancia nula; no obstante,
+     en algunos casos la complejidad de los cálculos hace necesaria la aparición de redundancias.
+
+        Consistencia. En aquellos casos en los que no se ha logrado esta redundancia nula, será necesario vigilar que aquella información que aparece repetida se actualice de forma coherente, es decir,
+     que todos los datos repetidos se actualicen de forma simultánea.
+
+        Seguridad. La información almacenada en una base de datos puede llegar a tener un gran valor. Los SGBD deben garantizar que esta información se encuentra seguridad frente a usuarios malintencionados,
+     que intenten leer información privilegiada; frente a ataques que deseen manipular o destruir la información; o simplemente ante las torpezas de algún usuario autorizado pero despistado. Normalmente, 
+     los SGBD disponen de un complejo sistema de permisos a usuarios y grupos de usuarios, que permiten otorgar diversas categorías de permisos.
+
+        Integridad. Se trata de adoptar las medidas necesarias para garantizar la validez de los datos almacenados. Es decir, se trata de proteger los datos ante fallos de hardware, datos introducidos por usuarios descuidados,
+     o cualquier otra circunstancia capaz de corromper la información almacenada.
+
+        Respaldo y recuperación. Los SGBD deben proporcionar una forma eficiente de realizar copias de respaldo de la información almacenada en ellos, y de restaurar a partir de estas copias los datos que se hayan podido perder.
+
+        Control de la concurrencia. En la mayoría de los entornos (excepto quizás el doméstico), lo más habitual es que sean muchas las personas que acceden a una base de datos, bien para recuperar información, bien para almacenarla.
+     Y es también frecuente que dichos accesos se realicen de forma simultánea. Así pues, un SGBD debe controlar este acceso concurrente a la información, que podría derivar en inconsistencias.
+
+
+3º : En que se diferencian las relaciones y las no relacionales.
+
+    Las bases de datos relacionales se basan en la organización de la información en partes pequeñas que se integran mediante identificadores;
+ a diferencia de las bases de datos no relacionales que, como su nombre lo indica, no tienen un identificador que sirva para relacionar dos o más conjuntos de datos.
